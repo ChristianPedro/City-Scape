@@ -46,9 +46,9 @@ animate();
  const controls = new OrbitControls(camera, renderer.domElement);
 controls.maxPolarAngle = Math.PI /2
 const loader = new GLTFLoader();
-loader.load( './CityScape.gltf', function ( gltf ) {
-
+loader.load( './CityScape2.gltf', function ( gltf ) {
 	scene.add( gltf.scene );
+	console.log(gltf.scene.children.filter(name => name=="Building001")[0])
 	 
 
 }, undefined, function ( error ) {
